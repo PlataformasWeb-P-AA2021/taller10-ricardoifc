@@ -10,5 +10,5 @@ admin.site.register(Parroquia, ParroquiaAdmin)
 class BarrioAdmin(admin.ModelAdmin):
 
     list_display = ('id', 'nombre', 'numViviendas', 'numParques', 'numEdificios', 'parroquia')
-    search_fields = ('nombre', 'numViviendas', 'numParques', 'numEdificios', 'parroquia')
+    search_fields = ('nombre')
 admin.site.register(Barrio, BarrioAdmin)
