@@ -1,0 +1,29 @@
+
+<h3>Parroquias y sus Barrios o ciudadelas </h3>
+
+<ul>
+ {% for p in parroquias %}
+
+  <li>
+    {{p}} - [<a href="{% url 'edit_parroquia' p.id %}">editar parroquia</a>]
+      <ul>
+        {% for b in p.lasparroquias.all %}
+          <li>
+            <span>Barrio {{b.nombre}} - viviendas: {{b.numViviendas}} - parques: {{b.numParques}} - edificios: {{b.numEdificios}} - [<a href="{% url 'edit_barrio' b.id %}">editar barrio</a>]</span>
+          </li>
+          
+        {% endfor %} 
+      </ul>
+      
+      
+  </li>
+  <hr />
+
+{% endfor %} 
+</ul>
+
+<br />
+[<a href="{% url 'add_parroquia' %}">agregar parroquia</a>]
+[<a href="{% url 'add_barrio' %}">Agregar Barrio</a>]
+
+

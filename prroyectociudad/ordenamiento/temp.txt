@@ -1,0 +1,3 @@
+<!--[<a href="{% url 'edit_parroquia' e.id %}">editar</a>] -->
+<!--[<a href="{% url 'edit_barrio' b.id %}">editar</a>] -->
+<!--[<a href="{% url 'add_barrio' e.id%}">[+] Barrio</a>] -->
